@@ -60,4 +60,6 @@ a{
 
 .current > a {
     color: crimson;
+    background-color:yellow;
+    padding:0.1em 0.2em;
 }
