@@ -3,6 +3,7 @@
     include "gestionBDD.inc.php";
     //include "gestionErreurs.php";
 
+    //CONNEXION A LA BASE DE DONNÉES
     $connexion=connect();
 
     if(!$connexion)
@@ -11,6 +12,7 @@
         afficherErreurs();
         exit();
     }
+
     // Afficher les prestations
     // Cette page contient un tableau affichant les différentes prestations
 
@@ -24,7 +26,6 @@
                 <td>Référence</td>
                 <td>Désignation</td>
                 <td>Prix UHT</td>
-                <td>Action</td>
             </tr>";
 
             $reqPrestations=$connexion->query('select DesignationPresta, PrixU_HT_Presta, RefPresta from prestation');
@@ -41,6 +42,8 @@
                     <td>$ref</td>
                     <td>$design</td>
                     <td>$prix</td>
+                    <td><a href='modificationPrestations.php?action=demanderModifPresta&amp;ref=$ref'>Modification</td>
+                    <td><a href='suppressionEtablissement.php?action=demanderSupprPresta&amp;ref=$ref'>Supprimer</a></td>;
                 <tr>";
                 $Prestations=$reqPrestations->fetch(PDO::FETCH_ASSOC);
             }
