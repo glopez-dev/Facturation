@@ -9,8 +9,8 @@
     <meta name="author" content="Gabriel Lopez" />
     <meta lang="fr" />
 
-    <link href="css/base.css" rel="stylesheet" />
-    <link href="css/acceuil.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/acceuil.css" rel="stylesheet" />
 
     <!--Fontawesome Icons : importe des icônes depuis le site web linké-->
 		<script src="https://kit.fontawesome.com/69c46c92d5.js" crossorigin="anonymous"></script>

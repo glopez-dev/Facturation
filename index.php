@@ -4,10 +4,12 @@
 
     <section class="guide">
       <h2>Guide</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim modi dignissimos nihil fugit rerum omnis quod 
-        pariatur dolorem possimus vel illo non odio asperiores, velit, numquam accusamus, ipsa magni?
-      </p>
+      Cette application web permet de gérer les factures des ligues de la M2L :
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul> 
     </section>
 
   </body>
