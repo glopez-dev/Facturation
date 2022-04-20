@@ -1,7 +1,11 @@
 <?php
+
+    $nomPage='Prestations';
+    $current='Prestations';
+
     include "header.inc.php";
     include "gestionBDD.inc.php";
-    //include "gestionErreurs.php";
+    include "controlesEtGestionErreurs.inc.php";
 
     //CONNEXION A LA BASE DE DONNÉES
     $connexion=connect();
@@ -17,16 +21,15 @@
     // Cette page contient un tableau affichant les différentes prestations
 
     echo "
-    <div class='Prestations'>
-        <table class='TableauBDD'>
-            <tr class'enTeteTableauBDD'>
-                <td>PRESTATIONS</td>
-            </tr>
-            <tr>
-                <td>Référence</td>
-                <td>Désignation</td>
-                <td>Prix UHT</td>
-            </tr>";
+    <div class='Conteneur-Tableau' >
+        <table class='TableauBDD' width='80%' cellspacing='0' cellpadding='0' align='center'>
+            <thread>
+                <tr>
+                    <th>Référence</th>
+                    <th>Désignation</th>
+                    <th>Prix UHT</th>
+                </tr>
+            </thread>";
 
             $reqPrestations=$connexion->query('select DesignationPresta, PrixU_HT_Presta, RefPresta from prestation');
             $Prestations=$reqPrestations->fetch(PDO::FETCH_ASSOC);
@@ -38,16 +41,19 @@
                 $prix=$Prestations['PrixU_HT_Presta'];
                 
                 echo"
-                <tr class='LigneTableauBDD'>
-                    <td>$ref</td>
-                    <td>$design</td>
-                    <td>$prix</td>
-                    <td><a href='modificationPrestations.php?action=demanderModifPresta&amp;ref=$ref'>Modification</td>
-                    <td><a href='suppressionEtablissement.php?action=demanderSupprPresta&amp;ref=$ref'>Supprimer</a></td>;
-                <tr>";
+                <tbody>
+                    <tr>
+                        <td>$ref</td>
+                        <td>$design</td>
+                        <td>$prix</td>
+                        <td><a href='modificationPrestations.php?action=demanderModifPresta&amp;ref=$ref'>Modifier</td>
+                        <td><a href='suppressionEtablissement.php?action=demanderSupprPresta&amp;ref=$ref'>Supprimer</a></td>
+                    <tr>
+                </tbody>";
                 $Prestations=$reqPrestations->fetch(PDO::FETCH_ASSOC);
             }
             echo"
         </table>
     </div>";
+    
 ?>

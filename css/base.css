@@ -14,7 +14,7 @@ body{
 
 header{
     margin: 0px;
-    padding: 10px 20px;
+    padding: 10px 40px;
     border: 2px solid black;
     color: transparent;
 
@@ -58,8 +58,63 @@ a{
     text-decoration: none;
 }
 
-.current > a {
-    color: crimson;
+.active > a {
+    color: black;
     background-color:yellow;
-    padding:0.1em 0.2em;
+    padding: 0.1em 0.2em;
+    border-radius: 15px;
+}
+
+/* Tableaux affichant les tables de la BDD */
+
+*{
+    font-family: sans-serif; /* Change your font family */
+}
+  
+.Conteneur-Tableau {
+    grid-column: 2 / span 2;
+    grid-row: 2 / 2;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.TableauBDD {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    max-width: 70%;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+  
+.TableauBDD thead tr th {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+  
+.TableauBDD th, .TableauBDD td {
+    padding: 12px 15px;
+}
+  
+.TableauBDD tbody tr {
+    border-bottom: 1px solid #dddddd;
+    align-content: center;
+}
+  
+.TableauBDD tbody tr:nth-of-type(even) {
+    background-color: #ffffff;
+}
+  
+.TableauBDD tbody tr:last-of-type {
+    border-bottom: 2px solid #000000;
+}
+
+.TableauBDD tbody tr.active-row {
+    font-weight: bold;
+    color: #000000;
 }
