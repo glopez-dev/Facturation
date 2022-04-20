@@ -1,4 +1,6 @@
 <?php
+  $nomPage='Accueil';
+  $current='Accueil';
   include "header.inc.php";
 ?>
 

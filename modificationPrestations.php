@@ -37,7 +37,7 @@ else
     $design=$Prestations['DesignationPresta'];
     $prix=$Prestations['PrixU_HT_Presta'];
 
-  /* verifierDonneesEtabM($connexion, $id, $nom, $adresseRue, $codePostal, $ville,  
+  /* verifierDonneesPrestaM($connexion, $id, $nom, $adresseRue, $codePostal, $ville,  
                         $tel, $nomResponsable, $nombreChambresOffertes);      
    if (nbErreurs()==0)
    {        
